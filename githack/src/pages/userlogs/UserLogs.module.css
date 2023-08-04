@@ -1,0 +1,29 @@
+.register-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 88vh;
+}
+
+.register-hero-box-wrapper {
+  background-image: url(../../assets/pexels-cottonbro-studio-6591434.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  position: relative;
+  color: #fff;
+}
+
+.register-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.register-overlay center,
+.register-form-container center {
+  margin-top: 3em;
+}
+
+.register-overlay center h1 {
+  margin-bottom: 2em;
+}
