@@ -7,7 +7,9 @@ function HomeHero() {
       {" "}
       <div className={classes["homehero-overlay"]}>
         <div className={classes["text-wrapper"]}>
-          <h1>Make a difference for your community.</h1>
+          <h1 className=" h1 display-3 fw-bold">
+            Make a difference for your community.
+          </h1>
           <Button variant="success" className="px-5 py-3">
             Get Started Today
           </Button>

@@ -1,7 +1,7 @@
 .register-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 88vh;
+
 }
 
 .register-hero-box-wrapper {

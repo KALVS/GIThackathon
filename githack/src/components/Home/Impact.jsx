@@ -3,13 +3,14 @@ import IconHomeAssistant from "../../ui/HomeAss";
 import IconDollar from "../../ui/Dollar";
 import IconPeopleArrows from "../../ui/People";
 import { Button } from "react-bootstrap";
+import classes from "./HomeHero.module.css";
 
 function Impact() {
   return (
     <div className="my-5 mx-5">
       <h2 className="mb-5">Community Impact</h2>
-      <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 text-center mb-4">
-        <div>
+      <div className={classes["impact-container"]}>
+        <div className={classes["impact-wrapper"]}>
           <IconHomeAssistant />
           <h3 className="mt-3">Easier recycling</h3>
           <p>
@@ -17,7 +18,7 @@ function Impact() {
             tenetur eveniet temporibus facilis!
           </p>
         </div>
-        <div>
+        <div className={classes["impact-wrapper"]}>
           <IconDollar />
           <h3 className="mt-3">Easier recycling</h3>
           <p>
@@ -25,7 +26,7 @@ function Impact() {
             tenetur eveniet temporibus facilis!
           </p>
         </div>
-        <div>
+        <div className={classes["impact-wrapper"]}>
           <IconPeopleArrows />
           <h3 className="mt-3">Easier recycling</h3>
           <p>

@@ -30,7 +30,7 @@ function Intro() {
         {whatWeDoData.map((list) => (
           <li key={list.idd}>
             {list.icon}
-            <p>{list.description}</p>
+            <p className="text-center">{list.description}</p>
           </li>
         ))}
       </ul>

@@ -1,22 +1,29 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
-// import Button from "@mui/material/Button";
 import { Form, Button } from "react-bootstrap";
-import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import {
+  createUserWithEmailAndPassword,
+  updateProfile,
+  signInWithPopup,
+  GoogleAuthProvider,
+} from "firebase/auth";
 import { auth } from "../../firebase";
-// import { auth } from "../firebase";
 import * as Yup from "yup";
-import FormModal from "./Modal";
+import GoogleButton from "react-google-button";
+
+// import FormModal from "./Modal";
 
 const SignupForm = () => {
-  const [isLoading, setIsLoading] = useState(false);
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
   const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(false);
+  // const [show, setShow] = useState(false);
+
+  // const handleClose = () => setShow(false);
+  // const handleShow = () => setShow(true);
+
+  const provider = new GoogleAuthProvider();
+  auth.languageCode = "it";
 
   const createUserHandler = function (email, password, displayname) {
     setIsLoading(true);
@@ -41,15 +48,40 @@ const SignupForm = () => {
         console.log("signin");
         // Proceed to set the display name
         //  setDisplayName(user, userName);
-        navigate("/getstarted");
         console.log(user);
+        navigate("/getstarted");
         console.log("navigate to user Home");
         // ...
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
+        console.log(errorCode, errorMessage);
         // ..
+      });
+  };
+
+  const signInWithGoogleHandler = function () {
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        // This gives you a Google Access Token. You can use it to access the Google API.
+        const credential = GoogleAuthProvider.credentialFromResult(result);
+        const token = credential.accessToken;
+        // The signed-in user info.
+        const user = result.user;
+        navigate("/getstarted");
+        // IdP data available using getAdditionalUserInfo(result)
+        // ...
+      })
+      .catch((error) => {
+        // Handle Errors here.
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // The email of the user's account used.
+        const email = error.customData.email;
+        // The AuthCredential type that was used.
+        const credential = GoogleAuthProvider.credentialFromError(error);
+        // ...
       });
   };
 
@@ -65,14 +97,14 @@ const SignupForm = () => {
         .required("Required"),
       email: Yup.string().email("Invalid email address").required("Required"),
       password: Yup.string()
-        .max(10, "Must be 20 characters or less")
+        .max(10, "Must be 10 characters or less")
         .required("Required"),
     }),
 
     onSubmit: (values, { resetForm }) => {
-      setShow(true);
       console.log(values);
       alert(JSON.stringify(values, null, 2));
+      createUserHandler(values.email, values.password, values.firstName);
       // setTimeout(() => {
       //   setShow(false);
       // }, 400);
@@ -113,7 +145,7 @@ const SignupForm = () => {
           ) : null}
         </Form.Group>
 
-        <Form.Group className="mb-5" controlId="formBasicPassword">
+        <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
           <Form.Control
             name="password"
@@ -131,6 +163,11 @@ const SignupForm = () => {
           Get Started
         </Button>
       </Form>
+      <center className="mb-3">
+        <p>Or</p>
+
+        <GoogleButton onClick={signInWithGoogleHandler} />
+      </center>
 
       {/* {show && <FormModal show={show} setshow={setShow} />} */}
     </>

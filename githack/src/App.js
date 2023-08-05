@@ -4,6 +4,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 import Register from "./pages/userlogs/Register";
 import Root from "./pages/Root";
+import { motion, AnimatePresence } from "framer-motion";
+import { useLocation } from "react-router-dom";
+
 import Home from "./pages/home/Home";
 
 const router = createBrowserRouter([
@@ -19,12 +22,54 @@ const router = createBrowserRouter([
         path: "/login",
         element: <Register />,
       },
+      {
+        path: "/getstarted",
+        element: <div> Get Started Page </div>,
+      },
     ],
     errorElement: <div>Handle wrong routing error page</div>,
   },
 ]);
+
+function LocationProvider({ children }) {
+  const location = useLocation();
+  return (
+    <AnimatePresence initial={false} exitBeforeEnter>
+      {children(location)}
+    </AnimatePresence>
+  );
+}
+
+const routeVariants = {
+  initial: {
+    y: "100vh",
+  },
+  final: {
+    y: "0vh",
+    transition: {
+      type: "spring",
+      mass: 0.4,
+    },
+  },
+};
+
 function App() {
-  return <RouterProvider router={router}></RouterProvider>;
+  return (
+    <RouterProvider router={router}>
+      <LocationProvider>
+        {(location) => (
+          <motion.div
+            initial="initial"
+            animate="final"
+            exit="initial"
+            variants={routeVariants}
+          >
+            {router.renderRoute(location)}
+          </motion.div>
+        )}
+      </LocationProvider>
+    </RouterProvider>
+  );
 }
 
 export default App;
