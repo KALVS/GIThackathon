@@ -1,0 +1,49 @@
+.footerContainer { 
+    background-color: gainsboro;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    justify-content: space-between;
+    margin-block-start: 72px;
+    
+}
+
+.footerWrapper { 
+    padding-block-start: 30px;
+    margin-inline-start: 123px;
+    margin-inline-end: 93px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1300px;
+}
+
+.footerCol {
+    flex-basis: calc(25% - 20px);
+    max-width: 25%;
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+
+@media screen and (max-width: 992px) {
+    .footerCol {
+        flex-basis: calc(50% - 20px);
+    }
+}
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .email  {
+    margin-block-start: 27px;
+    text-decoration: underline;
+    color: #000;
+  }
+
+  .email a {
+    margin-block-start: 27px;
+    text-decoration: underline;
+    color: #000;
+  }

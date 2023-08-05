@@ -33,17 +33,23 @@
 
 
 .intro-container {
-  margin: 4em;
+  max-width: 1280px;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
 }
 
 .intro-container ul {
   list-style-type: none;
+  
 }
 
 .intro-container ul li {
   display: flex;
-  justify-content: space-between;
+
   align-items: center;
   margin-bottom: 1.5em;
   text-align: start;
+}
+.intro-container ul li p {
+  margin-inline-start: 32px;
 }

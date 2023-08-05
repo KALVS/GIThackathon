@@ -23,6 +23,7 @@ const whatWeDoData = [
 ];
 function Intro() {
   return (
+    <div className={"my-5 mx-5"}>
     <div className={classes["intro-container"]}>
       <h2>What we do</h2>
       <p className="mb-5">We make it easy to keep your neighborhood clean.</p>
@@ -34,6 +35,7 @@ function Intro() {
           </li>
         ))}
       </ul>
+    </div>
     </div>
   );
 }
