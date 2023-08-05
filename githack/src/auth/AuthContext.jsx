@@ -1,7 +1,7 @@
-import { useState, createContext, useEffect, useContext } from 'react';
+import { useState, createContext, useEffect, useContext } from "react";
 
-import { auth } from '../firebase';
-import { onAuthStateChanged } from 'firebase/auth';
+import { auth } from "../firebase";
+import { onAuthStateChanged } from "firebase/auth";
 const UserAuthContext = createContext();
 
 export const UserAuthContextProvider = function ({ children }) {
@@ -14,12 +14,12 @@ export const UserAuthContextProvider = function ({ children }) {
         const uid = user.uid;
         console.log(user);
         setCurrentUser(user);
-        console.log('signed user in sing uuseEffect');
+        console.log("signed user in sing uuseEffect");
         // ...
       } else {
         // User is signed out
         // ...
-        console.log('user Signed Ouut');
+        console.log("user Signed Ouut");
         // navigate("/login");
       }
     });

@@ -1,5 +1,5 @@
 // icon:173-bin | Icomoon https://icomoon.io/ | Keyamoon
-import * as React from 'react';
+import * as React from "react";
 
 function Icon173Bin(props) {
   return (

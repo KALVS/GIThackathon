@@ -1,5 +1,5 @@
 // icon:people-arrows | Fontawesome https://fontawesome.com/ | Fontawesome
-import * as React from 'react';
+import * as React from "react";
 
 function IconPeopleArrows(props) {
   return (

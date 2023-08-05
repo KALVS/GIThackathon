@@ -1,5 +1,5 @@
 // icon:home-assistant | Material Design Icons https://materialdesignicons.com/ | Austin Andrews
-import * as React from 'react';
+import * as React from "react";
 
 function IconHomeAssistant(props) {
   return (

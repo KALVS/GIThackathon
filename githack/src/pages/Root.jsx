@@ -1,6 +1,6 @@
-import React from 'react';
-import { Outlet } from 'react-router-dom';
-import MainNavigation from '../components/nav/MainNavigation';
+import React from "react";
+import { Outlet } from "react-router-dom";
+import MainNavigation from "../components/nav/MainNavigation";
 function Root() {
   return (
     <React.Fragment>

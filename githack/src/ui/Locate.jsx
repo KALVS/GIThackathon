@@ -1,5 +1,5 @@
 // icon:locate-fixed | Lucide https://lucide.dev/ | Lucide
-import * as React from 'react';
+import * as React from "react";
 
 function IconLocateFixed(props) {
   return (
