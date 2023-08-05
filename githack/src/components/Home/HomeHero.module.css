@@ -43,7 +43,7 @@
 
 .intro-container ul li {
   display: flex;
-  margin-inline-start: 117px;
+  margin-inline-start: 6em;
   align-items: center;
   margin-bottom: 1.5em;
   text-align: start;

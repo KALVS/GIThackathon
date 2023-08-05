@@ -29,7 +29,7 @@ function Intro() {
         <p className="mb-5">We make it easy to keep your neighborhood clean.</p>
         <ul className={classes["listItems"]}>
           {whatWeDoData.map((list) => (
-            <li key={list.idd}>
+            <li key={list.id}>
               {list.icon}
               <p>{list.description}</p>
             </li>

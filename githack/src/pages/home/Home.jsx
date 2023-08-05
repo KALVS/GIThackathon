@@ -3,6 +3,7 @@ import HomeHero from "../../components/Home/HomeHero";
 import Intro from "../../components/Home/Intro";
 import Impact from "../../components/Home/Impact";
 import Footer from "../../components/Home/Footer";
+import ThreeSteps from "../../components/Home/ThreeSteps/ThreeSteps";
 
 function Home() {
   return (
@@ -10,6 +11,7 @@ function Home() {
       <HomeHero />
       <Intro />
       <Impact />
+      <ThreeSteps />
       <Footer />
     </>
   );
