@@ -27,10 +27,9 @@ function Register() {
           <center>
             <h1>Lorem ipsum dolor sit amet, consectetur adipisicing.</h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
-              tempore voluptatem deleniti, reprehenderit ducimus quis, esse
-              minima vitae facere culpa ad quaerat! Corporis tenetur aliquid
-              soluta, odio nihil doloribus similique.
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea tempore voluptatem deleniti, reprehenderit
+              ducimus quis, esse minima vitae facere culpa ad quaerat! Corporis tenetur aliquid soluta, odio nihil
+              doloribus similique.
             </p>
           </center>
         </div>

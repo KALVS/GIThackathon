@@ -6,13 +6,7 @@ import Navbar from "react-bootstrap/Navbar";
 
 function MainNavigation() {
   return (
-    <Navbar
-      collapseOnSelect
-      expand="lg"
-      bg="dark"
-      variant="dark"
-      className="p-3"
-    >
+    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className="p-3">
       <Container>
         <Navbar.Brand href="#home">GreenTribe</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -32,10 +26,7 @@ function MainNavigation() {
             </Nav.Link>
             <Nav.Link>
               {" "}
-              <Link
-                className="text-decoration-none text-white"
-                to="/getstarted"
-              >
+              <Link className="text-decoration-none text-white" to="/getstarted">
                 Get Started
               </Link>
             </Nav.Link>

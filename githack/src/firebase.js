@@ -14,7 +14,7 @@ const firebaseConfig = {
   storageBucket: "greentrybe-fe6b3.appspot.com",
   messagingSenderId: "144185377824",
   appId: "1:144185377824:web:18626960fbd0a69fc56845",
-  measurementId: "G-Z7XQ95X3V0",
+  measurementId: "G-Z7XQ95X3V0"
 };
 
 // Initialize Firebase
@@ -22,4 +22,3 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 export const auth = getAuth(app);
 export default app;
-

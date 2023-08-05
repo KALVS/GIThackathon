@@ -29,11 +29,7 @@ export const UserAuthContextProvider = function ({ children }) {
     };
   }, []);
 
-  return (
-    <UserAuthContext.Provider value={{ currentUser }}>
-      {children}
-    </UserAuthContext.Provider>
-  );
+  return <UserAuthContext.Provider value={{ currentUser }}>{children}</UserAuthContext.Provider>;
 };
 
 export const UserAuth = function () {
