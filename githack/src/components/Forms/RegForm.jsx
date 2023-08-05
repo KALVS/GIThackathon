@@ -1,13 +1,13 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { useFormik } from "formik";
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useFormik } from 'formik';
 // import Button from "@mui/material/Button";
-import { Form, Button } from "react-bootstrap";
-import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
-import { auth } from "../../firebase";
+import { Form, Button } from 'react-bootstrap';
+import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
+import { auth } from '../../firebase';
 // import { auth } from "../firebase";
-import * as Yup from "yup";
-import FormModal from "./Modal";
+import * as Yup from 'yup';
+import FormModal from './Modal';
 
 const SignupForm = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -28,7 +28,7 @@ const SignupForm = () => {
         updateProfile(auth.currentUser, {
           displayName: displayname,
           photoURL:
-            "https://images.unsplash.com/photo-1615986201152-7686a4867f30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=725&q=80",
+            'https://images.unsplash.com/photo-1615986201152-7686a4867f30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=725&q=80'
         })
           .then(() => {
             // Profile updated!
@@ -38,12 +38,12 @@ const SignupForm = () => {
             // An error occurred
             // ...
           });
-        console.log("signin");
+        console.log('signin');
         // Proceed to set the display name
         //  setDisplayName(user, userName);
-        navigate("/getstarted");
+        navigate('/getstarted');
         console.log(user);
-        console.log("navigate to user Home");
+        console.log('navigate to user Home');
         // ...
       })
       .catch((error) => {
@@ -55,18 +55,14 @@ const SignupForm = () => {
 
   const formik = useFormik({
     initialValues: {
-      firstName: "",
-      password: "",
-      email: "",
+      firstName: '',
+      password: '',
+      email: ''
     },
     validationSchema: Yup.object({
-      firstName: Yup.string()
-        .max(15, "Must be 15 characters or less")
-        .required("Required"),
-      email: Yup.string().email("Invalid email address").required("Required"),
-      password: Yup.string()
-        .max(10, "Must be 20 characters or less")
-        .required("Required"),
+      firstName: Yup.string().max(15, 'Must be 15 characters or less').required('Required'),
+      email: Yup.string().email('Invalid email address').required('Required'),
+      password: Yup.string().max(10, 'Must be 20 characters or less').required('Required')
     }),
 
     onSubmit: (values, { resetForm }) => {
@@ -77,8 +73,8 @@ const SignupForm = () => {
       //   setShow(false);
       // }, 400);
 
-      resetForm({ values: "" });
-    },
+      resetForm({ values: '' });
+    }
   });
   return (
     <>
