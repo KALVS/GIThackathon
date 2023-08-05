@@ -14,9 +14,9 @@ function Home() {
       <Intro />
       <Impact />
       <ThreeSteps />
+      <ReadyBin />
       <Footer />
       {/* <Steps /> */}
-      <ReadyBin />
     </>
   );
 }
