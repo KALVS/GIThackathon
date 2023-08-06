@@ -1,0 +1,19 @@
+/* FAQ.css */
+
+ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 20px;
+  }
+  
+  li strong {
+    font-weight: bold;
+  }
+  
+  li p {
+    margin-top: 5px;
+  }
+  

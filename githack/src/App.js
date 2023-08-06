@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useLocation } from "react-router-dom";
 
 import Home from "./pages/home/Home";
+import About from "./pages/about/About";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/About",
+        element: <About />,
       },
       {
         path: "/login",
@@ -30,6 +35,7 @@ const router = createBrowserRouter([
     errorElement: <div>Handle wrong routing error page</div>,
   },
 ]);
+
 
 function LocationProvider({ children }) {
   const location = useLocation();
