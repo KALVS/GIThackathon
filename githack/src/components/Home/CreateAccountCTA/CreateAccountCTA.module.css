@@ -1,65 +1,62 @@
 .container {
-    max-width: 1280px;
-    margin-inline-start: auto;
-    margin-inline-end: auto;
-  }
-  
-.cardContainer {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-.card {
-    background-color: red;
-    width: 363px;
-    height: 227px;
-    
-  }
-
-.strong {
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 150%; /* 60px */
-  }
-
-  .p {
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%; /* 36px */
+  max-width: 1280px;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
 }
 
-  .icon {
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    background-color: black;
-    margin: auto; /* Center both horizontally and vertically */
-    height: 108px;
-    width: 108px;
+.cardContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  width: 363px;
+  height: 227px;
+}
+
+.strong {
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 60px */
+}
+
+.p {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 36px */
+}
+
+.icon {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin: auto; /* Center both horizontally and vertically */
+  height: 108px;
+  width: 108px;
 }
 
 .CTAcaption {
-    margin-block-start: 100px;
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+  margin-block-start: 100px;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
 }
 
 .CTAbutton {
-    width: 836px;
-    height: 88px;
-    /* flex-shrink: 0; */
-    box-shadow: 0;
-    background: #707070;
-    color: white;
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    margin: auto; /* Center both horizontally and vertically */
+  width: 836px;
+  height: 88px;
+  /* flex-shrink: 0; */
+  box-shadow: 0;
+  background: #707070;
+  color: white;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin: auto; /* Center both horizontally and vertically */
 }
