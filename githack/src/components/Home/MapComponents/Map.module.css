@@ -1,0 +1,17 @@
+.map-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+}
+
+.results-wrapper p {
+  font-size: .5rem;
+}
+
+.sub-result-wrapper {
+  margin-bottom: 1em;
+  background-color: rgba(211, 211, 211, 0.381);
+  padding: 1em;
+  border-radius: 5px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}

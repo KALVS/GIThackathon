@@ -1,4 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import "leaflet/dist/leaflet.css";
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
@@ -58,12 +59,7 @@ function App() {
     <RouterProvider router={router}>
       <LocationProvider>
         {(location) => (
-          <motion.div
-            initial="initial"
-            animate="final"
-            exit="initial"
-            variants={routeVariants}
-          >
+          <motion.div initial="initial" animate="final" exit="initial" variants={routeVariants}>
             {router.renderRoute(location)}
           </motion.div>
         )}

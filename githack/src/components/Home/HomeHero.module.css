@@ -59,3 +59,11 @@
   line-height: 150%;
   /* 48px */
 }
+
+
+
+.step-wrapper {
+  display: flex;
+  gap: 2em;
+  justify-content: space-between;
+}

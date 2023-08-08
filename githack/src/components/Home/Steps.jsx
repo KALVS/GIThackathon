@@ -4,7 +4,7 @@ import classes from "./HomeHero.module.css";
 
 function Steps() {
   return (
-    <div className="m-5">
+    <div className="">
       <div className={classes["step-wrapper"]}>
         <div style={{ width: "18rem" }} className="position-relative card">
           <span className="position-absolute top-0 start-0 translate-middle badge rounded-pill bg-success p-4 fw-bold fs-5">

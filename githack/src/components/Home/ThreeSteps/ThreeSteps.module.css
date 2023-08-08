@@ -5,22 +5,23 @@
 }
 
 
-p {
-    color: #000;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%; /* 36px */
+.container p {
+  color: #000;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  /* 36px */
 }
 
 .cardContainer {
-  width:100%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
 .card {
-  
+
   width: 363px;
   height: 409px
 }
@@ -28,21 +29,23 @@ p {
 .graphic {
   background-color: gainsboro;
   height: 182px;
-  width:100%
+  width: 100%
 }
 
 .header {
   font-size: 32px;
-font-style: normal;
-font-weight: 400;
-line-height: 125%; /* 40px */
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  /* 40px */
 }
 
 .caption {
   font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 150%; /* 24px */
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  /* 24px */
 }
 
 .cardIcon {

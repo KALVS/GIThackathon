@@ -34,8 +34,7 @@ function BinForm() {
           zip: "",
           terms: false,
           amount: 50,
-        }}
-      >
+        }}>
         {({ handleSubmit, handleChange, values, touched, errors }) => (
           <Form noValidate onSubmit={handleSubmit}>
             <Row className="mb-3">
@@ -75,9 +74,7 @@ function BinForm() {
                     onChange={handleChange}
                     isInvalid={!!errors.username}
                   />
-                  <Form.Control.Feedback type="invalid">
-                    {errors.username}
-                  </Form.Control.Feedback>
+                  <Form.Control.Feedback type="invalid">{errors.username}</Form.Control.Feedback>
                 </InputGroup>
               </Form.Group>
               <Form.Group as={Col} md="4" controlId="validationFormikAmount">
@@ -93,9 +90,7 @@ function BinForm() {
                     onChange={handleChange}
                     isInvalid={!!errors.amount}
                   />
-                  <Form.Control.Feedback type="invalid">
-                    {errors.amount}
-                  </Form.Control.Feedback>
+                  <Form.Control.Feedback type="invalid">{errors.amount}</Form.Control.Feedback>
                 </InputGroup>
               </Form.Group>
             </Row>
@@ -111,9 +106,7 @@ function BinForm() {
                   isInvalid={!!errors.city}
                 />
 
-                <Form.Control.Feedback type="invalid">
-                  {errors.city}
-                </Form.Control.Feedback>
+                <Form.Control.Feedback type="invalid">{errors.city}</Form.Control.Feedback>
               </Form.Group>
               <Form.Group as={Col} md="3" controlId="validationFormik04">
                 <Form.Label>State</Form.Label>
@@ -125,9 +118,7 @@ function BinForm() {
                   onChange={handleChange}
                   isInvalid={!!errors.state}
                 />
-                <Form.Control.Feedback type="invalid">
-                  {errors.state}
-                </Form.Control.Feedback>
+                <Form.Control.Feedback type="invalid">{errors.state}</Form.Control.Feedback>
               </Form.Group>
               <Form.Group as={Col} md="3" controlId="validationFormik05">
                 <Form.Label>Zip</Form.Label>
@@ -140,23 +131,14 @@ function BinForm() {
                   isInvalid={!!errors.zip}
                 />
 
-                <Form.Control.Feedback type="invalid">
-                  {errors.zip}
-                </Form.Control.Feedback>
+                <Form.Control.Feedback type="invalid">{errors.zip}</Form.Control.Feedback>
               </Form.Group>
-              <Form.Select
-                aria-label="Default select example"
-                as={Col}
-                md="4"
-                className="my-3"
-              >
+              <Form.Select aria-label="Default select example" as={Col} md="4" className="my-3">
                 <option>Open this select menu</option>
                 <option value="1">Plastics: bottles, containers</option>
                 <option value="2">Electronics: computers, tv s</option>
                 <option value="3">Paper & Cardboard</option>
-                <option value="Glass: bottles, containers">
-                  Glass: bottles, containers
-                </option>
+                <option value="Glass: bottles, containers">Glass: bottles, containers</option>
               </Form.Select>
             </Row>
             <Form.Group className="mb-3">
@@ -175,8 +157,11 @@ function BinForm() {
               <p>No internet? No problem!</p>
               <h2>Call 1-800-111-1111</h2>
               <p>We will help you locate your nearest drop off center.</p>
+
+              <Button type="submit" className="py-3  px-5">
+                Show Location
+              </Button>
             </center>
-            <Button type="submit">Show Location</Button>
           </Form>
         )}
       </Formik>
