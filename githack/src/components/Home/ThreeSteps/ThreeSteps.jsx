@@ -5,7 +5,7 @@ import OneIcon from "../../../ui/threesteps/one";
 import TwoIcon from "../../../ui/threesteps/two";
 import ThreeIcon from "../../../ui/threesteps/three";
 
-export function ThreeSteps() {
+function ThreeSteps() {
   return (<>
       <div className={"my-5 mx-5"}>
         <div className={classes["container"]}>
@@ -67,3 +67,5 @@ export function ThreeSteps() {
     </>
   );
 }  
+
+export default ThreeSteps
