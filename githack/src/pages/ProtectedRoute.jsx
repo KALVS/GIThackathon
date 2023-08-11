@@ -1,7 +1,7 @@
 import React from "react";
 import { Navigate } from "react-router-dom";
+import { UserAuth } from "../auth/AuthContext";
 
-// import { UserAuth } from "../auth/AuthContext";
 function ProtectedRoute({ children }) {
   // const navigate = useNavigate();
   const { currentUser } = UserAuth();
