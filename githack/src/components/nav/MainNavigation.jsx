@@ -3,47 +3,50 @@ import Container from "react-bootstrap/Container";
 import { Link } from "react-router-dom";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import logo from "../../assets/Logo.svg";
 
 function MainNavigation() {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className="p-3">
+    <Navbar collapseOnSelect expand="lg" bg="light" variant="light" className="p-3 ">
       <Container>
-        <Navbar.Brand href="#home">GreenTribe</Navbar.Brand>
+        <Navbar.Brand href="#home" className="text-success fw-bolder">
+          <img src={logo} alt="website logo" />
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="ms-auto fw-bold">
+          <Nav className="ms-auto fw-bold ">
             <Nav.Link>
               {" "}
-              <Link className="text-decoration-none text-white" to="/">
+              <Link className="text-decoration-none text-success" to="/">
                 Home
               </Link>
             </Nav.Link>
             <Nav.Link>
               {" "}
-              <Link className="text-decoration-none text-white" to="/about">
+              <Link className="text-decoration-none text-success" to="/about">
                 About
               </Link>
             </Nav.Link>
             <Nav.Link>
               {" "}
-              <Link className="text-decoration-none text-white" to="/getstarted">
+              <Link className="text-decoration-none text-success" to="/getstarted">
                 Get Started
               </Link>
             </Nav.Link>
             <Nav.Link>
               {" "}
-              <Link className="text-decoration-none text-white" to="/investors">
+              <Link className="text-decoration-none text-success" to="/investors">
                 Investors
               </Link>
             </Nav.Link>
             <Nav.Link>
               {" "}
-              <Link className="text-decoration-none text-white" to="/contact">
+              <Link className="text-decoration-none text-success" to="/contact">
                 Contact Us
               </Link>
             </Nav.Link>
 
-            <Nav.Link className="btn btn-primary">
+            <Nav.Link className="btn btn-primary bg-success">
               <Link className="text-decoration-none text-white" to="/login">
                 Login
               </Link>

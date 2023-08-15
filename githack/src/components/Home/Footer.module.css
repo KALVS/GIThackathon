@@ -1,5 +1,6 @@
 .footerContainer {
-  background-color: gainsboro;
+  background-color: #347347;
+  color: #fff;
   margin-inline-start: auto;
   margin-inline-end: auto;
   justify-content: space-between;
@@ -37,7 +38,7 @@ ul {
 .email {
   margin-block-start: 27px;
   text-decoration: underline;
-  color: #000;
+  color: #fff;
 }
 
 .email a {

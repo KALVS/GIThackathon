@@ -1,21 +1,37 @@
 .impactContainer {
-  max-width: 1280px;
-  margin-inline-start: auto;
-  margin-inline-end: auto;
+  background-color: #E1F0DF;
+  padding: 1.5em;
 }
 
-.signUpContainer {
-  margin-inline-start: auto;
-  margin-inline-end: auto;
-  display: flex;
+.image-container {
+  display: inline-block;
+  border: 10px solid #EECB3E;
+  border-radius: 50%;
+  margin-bottom: 1em;
+  /* E0845C */
+  /* EECB3E */
+  /* Ensure the container is a square to maintain the circular shape */
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  /* Hide anything that overflows the container */
 }
 
-.signUpButton {
-  max-width: 836px;
+.round-image {
   width: 100%;
-  margin-inline-start: auto;
-  margin-inline-end: auto;
+  /* Make the image fill the container */
+  height: 100%;
+  /* Make the image fill the container */
+  object-fit: cover;
+  /* Preserve the image's aspect ratio and cover the container */
 }
+
+.impactContainer h2 {
+  color: #347347;
+}
+
+
+
 
 @media screen and (max-width: 992px) {
   .impactWrapper:last-child {

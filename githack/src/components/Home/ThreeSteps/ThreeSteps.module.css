@@ -4,51 +4,41 @@
   margin-inline-end: auto;
 }
 
+.container h2 {
+  color: #347347;
+}
+
 
 .container p {
   color: #000;
-  font-size: 24px;
   font-style: normal;
-  font-weight: 400;
   line-height: 150%;
   /* 36px */
 }
 
-.cardContainer {
-  width: 100%;
+.step-wrapper h4 {
+  color: #347347;
+}
+
+.icon-wrapper {
+  background-color: #E1F0DF;
+  padding: 1em;
+  margin-bottom: 1.2em;
+}
+
+.signUpWrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  margin-top: 1.2em;
 }
 
-.card {
-
-  width: 363px;
-  height: 409px
-}
-
-.graphic {
-  background-color: gainsboro;
-  height: 182px;
-  width: 100%
-}
-
-.header {
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 125%;
-  /* 40px */
-}
-
-.caption {
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 150%;
-  /* 24px */
-}
-
-.cardIcon {
-  margin-block-end: -40px;
-  margin-inline-start: -50px;
+.signUpWrapper button {
+  background-color: #347347;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  padding: .8em 2em;
 }

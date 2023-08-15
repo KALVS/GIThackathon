@@ -133,7 +133,7 @@ function BinForm() {
 
                 <Form.Control.Feedback type="invalid">{errors.zip}</Form.Control.Feedback>
               </Form.Group>
-              <Form.Select aria-label="Default select example" as={Col} md="4" className="my-3">
+              <Form.Select aria-label="Default select example" as={Col} md="4" className="my-3 bg-success text-white">
                 <option>Open this select menu</option>
                 <option value="1">Plastics: bottles, containers</option>
                 <option value="2">Electronics: computers, tv s</option>
@@ -158,7 +158,7 @@ function BinForm() {
               <h2>Call 1-800-111-1111</h2>
               <p>We will help you locate your nearest drop off center.</p>
 
-              <Button type="submit" className="py-3  px-5">
+              <Button type="submit" className="py-3  px-5 bg-success">
                 Show Location
               </Button>
             </center>

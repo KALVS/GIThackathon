@@ -1,34 +1,18 @@
 .homehero-container {
   height: 600px;
   width: 100%;
-  background-image: url(../../assets/pexels-cottonbro-studio-6591434.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  position: relative;
+  background-color: #E1F0DF;
+  display: flex;
+  align-items: center;
+  padding: 3em;
 }
 
-.homehero-overlay {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-}
 
-.text-wrapper {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-  transform: translate(-50%, -50%);
-  color: #fff;
-}
+
 
 .text-wrapper h1 {
-  margin-bottom: 1em;
+
+  color: #347347;
 }
 
 .intro-container {
@@ -37,28 +21,27 @@
   margin-inline-end: auto;
 }
 
+.intro-container h2 {
+  color: #347347;
+}
+
 .intro-container ul {
   list-style-type: none;
 }
 
 .intro-container ul li {
   display: flex;
-  margin-inline-start: 6em;
   align-items: center;
   margin-bottom: 1.5em;
   text-align: start;
+  gap: 2em;
 }
 
-.intro-container ul li p {
-  margin-inline-start: 32px;
-  color: #000;
-
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 150%;
-  /* 48px */
+.icon-wrapper {
+  background-color: #E1F0DF;
+  padding: 1em;
 }
+
 
 
 

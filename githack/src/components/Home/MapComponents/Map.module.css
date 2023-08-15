@@ -2,6 +2,12 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1em;
+  padding: 3em;
+  background-color: #E1F0DF;
+}
+
+.map-wrapper h2 {
+  color: #347347;
 }
 
 .results-wrapper p {

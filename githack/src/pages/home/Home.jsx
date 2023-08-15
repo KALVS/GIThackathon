@@ -12,14 +12,13 @@ function Home() {
   return (
     <>
       <HomeHero />
-      <div className="m-5">
-        <Intro />
-        <Impact />
-        <ThreeSteps />
 
-        <ReadyBin />
-        <Map />
-      </div>
+      <Intro />
+      <Impact />
+      <ThreeSteps />
+
+      <ReadyBin />
+      <Map />
 
       <Footer />
     </>
