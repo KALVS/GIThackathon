@@ -6,7 +6,8 @@ import TwoIcon from "../../../ui/threesteps/two";
 import ThreeIcon from "../../../ui/threesteps/three";
 
 function ThreeSteps() {
-  return (<>
+  return (
+    <>
       <div className={"my-5 mx-5"}>
         <div className={classes["container"]}>
           <h2 className="mb-5">How does this work? Hint: It{"'"}s simple!</h2>
@@ -15,7 +16,7 @@ function ThreeSteps() {
               <TwoArrows />
             </div>
             <div className="col-lg-10">
-              <p>
+              <p className={classes["p"]}>
                 Lorem ipsum dolor sit amet. 33 veniam eius est impedit modi id molestiae dolore ex expedita cumque ut
                 doloribus
               </p>
@@ -66,6 +67,6 @@ function ThreeSteps() {
       </div>
     </>
   );
-}  
+}
 
-export default ThreeSteps
+export default ThreeSteps;

@@ -21,6 +21,21 @@
   max-width: 25%;
   box-sizing: border-box;
   padding: 0 10px;
+  
+}
+
+.footerHeader {
+  display: flex;
+justify-content: space-evenly;
+flex-direction: row;
+}
+
+.socialsWrapper {
+display: flex;
+justify-content: space-evenly;
+flex-direction: row;
+margin-block-start: 21px;
+margin-inline-start: 0;
 }
 
 @media screen and (max-width: 992px) {
