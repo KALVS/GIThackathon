@@ -6,6 +6,7 @@ import Footer from "../../components/Home/Footer";
 import ThreeSteps from "../../components/Home/ThreeSteps/ThreeSteps";
 // import Steps from "../../components/Home/Steps";
 import ReadyBin from "../../components/Home/ReadyBin";
+import CreateAccountCTA from "../../components/Home/CreateAccountCTA/CreateAccountCTA";
 
 function Home() {
   return (
@@ -15,6 +16,7 @@ function Home() {
       <Impact />
       <ThreeSteps />
       <ReadyBin />
+      <CreateAccountCTA />
       <Footer />
       {/* <Steps /> */}
     </>
