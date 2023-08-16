@@ -1,28 +1,51 @@
 
-
-
-
 import React from 'react';
-import "./FAQ.css";
+import { Accordion } from 'react-bootstrap';
 
 function FAQ() {
   return (
-    <div>
-      <h2>Frequently Asked Questions</h2>
-      <ul>
-        <li>
-          <strong>Question 1:</strong> How do I get started with React?
-          <p>
-            Answer: To get started with React, you need to have Node.js and npm installed. Then, create a new React app using Create React App.
-          </p>
-        </li>
-        <li>
-          <strong>Question 2:</strong> How do I handle state in React?
-          <p>
-            Answer: React provides the useState hook to manage state in functional components.
-          </p>
-        </li>
-      </ul>
+<div className={"my-5 mx-5"}>
+    <Accordion >
+      <Accordion.Item eventKey="0">
+        <Accordion.Header>How many bins can I get?</Accordion.Header>
+        <Accordion.Body>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </Accordion.Body>
+      </Accordion.Item>
+      <Accordion.Item eventKey="1">
+        <Accordion.Header>What if no one comes when I request pickup?</Accordion.Header>
+        <Accordion.Body>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </Accordion.Body>
+      </Accordion.Item>
+      <Accordion.Item eventKey="2">
+        <Accordion.Header>Can I get a stolen/broken bin replaced?</Accordion.Header>
+        <Accordion.Body>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </Accordion.Body>
+      </Accordion.Item>
+    </Accordion>
+
+
+    
     </div>
   );
 }

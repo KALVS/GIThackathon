@@ -20,4 +20,10 @@
       line-height: 120%; /* 36px */
   }
 
-  
+
+  .listItem {
+    display: flex;
+  align-items: center;
+  background-color: red;
+  }
+
