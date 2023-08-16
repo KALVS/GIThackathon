@@ -1,5 +1,8 @@
 import React from "react";
 import classes from "./Footer.module.css";
+import FacebookIcon from "../../ui/socials/facebook";
+import TwitterIcon from "../../ui/socials/twitter";
+import InstagramIcon from "../../ui/socials/instagram";
 
 function Footer() {
   return (
@@ -33,9 +36,14 @@ function Footer() {
           </strong>
         </div>
         <div className={classes["footerCol"]}>
-          <strong style={{ width: "262px", marginBlockStart: "21px" }}>
+          <strong className={classes["footerHeader"]} style={{ width: "262px" }}>
             Share us on social media
           </strong>
+          <div className={classes["socialsWrapper"]}>
+            <InstagramIcon />
+            <TwitterIcon />
+            <FacebookIcon />
+          </div>
         </div>
       </div>
     </div>
