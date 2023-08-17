@@ -13,15 +13,15 @@ const myImpact = [
     id: "easy rec",
   },
   {
-    title: "Easier recycling",
+    title: "More Jobs",
     img: moreJobs,
-    description: "No more wondering who is going to pick up all your recyclables.",
+    description: "More opportunity for people to make a living, picking up recycling.",
     id: "nojob",
   },
   {
-    title: "Easier recycling",
+    title: "Cleaner Community",
     img: kid,
-    description: "No more wondering who is going to pick up all your recyclables.",
+    description: "More scheduled pickups means less recyclable waste on the streets",
     id: "cleaner",
   },
 ];

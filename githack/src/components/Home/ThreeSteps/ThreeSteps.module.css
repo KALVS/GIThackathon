@@ -28,9 +28,10 @@
 
 .signUpWrapper {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 1em;
+  width: 65%;
+  margin: auto;
   margin-top: 1.2em;
 }
 

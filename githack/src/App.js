@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 import Register from "./pages/userlogs/Register";
 import Root from "./pages/Root";
+import Individual from "./pages/individual/Individual";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLocation } from "react-router-dom";
 
@@ -24,8 +25,8 @@ const router = createBrowserRouter([
         element: <Register />,
       },
       {
-        path: "/getstarted",
-        element: <div> Get Started Page </div>,
+        path: "/individual",
+        element: <Individual />,
       },
     ],
     errorElement: <div>Handle wrong routing error page</div>,

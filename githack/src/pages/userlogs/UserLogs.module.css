@@ -5,25 +5,34 @@
 }
 
 .register-hero-box-wrapper {
-  background-image: url(../../assets/pexels-cottonbro-studio-6591434.jpg);
+  background-image: url(../../assets/unsplash_Jwh_k0K_QOM.png);
   background-size: cover;
   background-position: 50% 50%;
   position: relative;
-  color: #fff;
+
 }
 
 .register-overlay {
   position: absolute;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(250, 250, 250, 0.2);
+
 }
 
 .register-overlay center,
 .register-form-container center {
   margin-top: 3em;
+
+}
+
+.register-overlay p {
+  color: #323934;
+  font-weight: 600;
+  font-size: 1.1rem;
 }
 
 .register-overlay center h1 {
   margin-bottom: 2em;
+  color: #347347;
 }

@@ -24,7 +24,7 @@ function ThreeSteps() {
         </div>
       </div>
 
-      <div className="d-flex justify-content-between align-items-center text-center px-5">
+      <div className="d-flex justify-content-between align-items-center text-center px-5 gap-3">
         <div className={classes["step-wrapper"]}>
           <h4 className="mb-3 fs-5">Step 1</h4>
           <div className={classes["icon-wrapper"]}>
@@ -34,19 +34,19 @@ function ThreeSteps() {
         </div>
 
         <div className={classes["step-wrapper"]}>
-          <h4 className="mb-3 fs-5">Step 1</h4>
+          <h4 className="mb-3 fs-5">Step 2</h4>
           <div className={classes["icon-wrapper"]}>
             <IconRecycle />
           </div>
-          <p className="my-3"> Find a recycling center near you.</p>
+          <p className="my-3">Trade in a bag of recycling for a free bin.</p>
         </div>
 
         <div className={classes["step-wrapper"]}>
-          <h4 className="mb-3 fs-5">Step 1</h4>
+          <h4 className="mb-3 fs-5">Step 3</h4>
           <div className={classes["icon-wrapper"]}>
             <IconHomeAssistant />
           </div>
-          <p className="my-3"> Find a recycling center near you.</p>
+          <p className="my-3"> Make a free account to schedule pickup.</p>
         </div>
       </div>
 

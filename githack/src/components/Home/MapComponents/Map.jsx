@@ -1,29 +1,50 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
-import icon from "leaflet/dist/images/marker-icon.png";
-import iconRetinaUrl from "leaflet/dist/images/marker-icon-2x.png";
-import iconShadow from "leaflet/dist/images/marker-shadow.png";
+
 import classes from "./Map.module.css";
+
 function MyMap() {
+  const [userLatAndLong, setUserLatAndLong] = useState({ latitude: 6.5994752, longitude: 3.3488896 });
+  const successCallback = (position) => {
+    const { latitude, longitude } = position.coords;
+
+    setUserLatAndLong({
+      latitude: latitude,
+      longitude: longitude,
+    });
+  };
+  const errorCallback = (error) => {
+    console.log(error);
+  };
+  useEffect(() => {
+    navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+  }, []);
+
   return (
     <div className={classes["map-wrapper"]}>
       <div>
         <h3>Map view</h3>
-        <MapContainer center={[51.505, -0.09]} zoom={13} style={{ height: "200pt", width: "300px" }}>
+        <MapContainer
+          center={[userLatAndLong.latitude, userLatAndLong.longitude]}
+          zoom={13}
+          className={classes["mymap-container"]}
+          style={{ height: "200pt", width: "420px" }}>
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-          <Marker position={[51.505, -0.09]}>
+
+          <Marker position={[userLatAndLong.latitude, userLatAndLong.longitude]}>
             <Popup>
-              A pretty CSS3 popup. <br /> Easily customizable.
+              Your Pickup is
+              <br /> available here.
             </Popup>
           </Marker>
         </MapContainer>
       </div>
 
-      <div clssName={classes["results-wrapper"]}>
+      <div className={classes["results-wrapper"]}>
         <h3>Results</h3>
         <p className="mb-3">Two results found your matching criteria </p>
         <div className={classes["sub-result-wrapper"]}>

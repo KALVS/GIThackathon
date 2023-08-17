@@ -29,8 +29,8 @@ function MainNavigation() {
             </Nav.Link>
             <Nav.Link>
               {" "}
-              <Link className="text-decoration-none text-success" to="/getstarted">
-                Get Started
+              <Link className="text-decoration-none text-success" to="/individual">
+                Individual
               </Link>
             </Nav.Link>
             <Nav.Link>
