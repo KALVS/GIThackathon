@@ -10,6 +10,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useLocation } from "react-router-dom";
 
 import Home from "./pages/home/Home";
+import Investor from "./pages/investor/Investor";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: "/individual",
         element: <Individual />,
+      },
+      {
+        path: "/investors",
+        element: <Investor />,
       },
     ],
     errorElement: <div>Handle wrong routing error page</div>,

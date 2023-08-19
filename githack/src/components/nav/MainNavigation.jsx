@@ -7,7 +7,13 @@ import logo from "../../assets/Logo.svg";
 
 function MainNavigation() {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="light" variant="light" className="p-3 ">
+    <Navbar
+      collapseOnSelect
+      expand="lg"
+      bg="light"
+      variant="light"
+      className="p-3 "
+      style={{ borderBottom: "1.5px solid #347347" }}>
       <Container>
         <Navbar.Brand href="#home" className="text-success fw-bolder">
           <img src={logo} alt="website logo" />
