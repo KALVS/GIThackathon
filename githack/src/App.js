@@ -8,8 +8,9 @@ import Root from "./pages/Root";
 import Individual from "./pages/individual/Individual";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLocation } from "react-router-dom";
-
+import Contact from "./pages/contact/Contact";
 import Home from "./pages/home/Home";
+import About from "./pages/about/About";
 
 const router = createBrowserRouter([
   {
@@ -21,12 +22,20 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
+        path: "/about",
+        element: <About />,
+      },
+      {
         path: "/login",
         element: <Register />,
       },
       {
         path: "/individual",
         element: <Individual />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
       },
     ],
     errorElement: <div>Handle wrong routing error page</div>,
