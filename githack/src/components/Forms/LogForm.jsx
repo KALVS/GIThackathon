@@ -2,14 +2,13 @@ import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useFormik } from "formik";
 import { Form, Button } from "react-bootstrap";
-import { createUserWithEmailAndPassword, updateProfile, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
 import * as Yup from "yup";
-import GoogleButton from "react-google-button";
 
 // import FormModal from "./Modal";
 
-const SignupForm = () => {
+const LogForm = () => {
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false);
   // const [show, setShow] = useState(false);
@@ -17,35 +16,16 @@ const SignupForm = () => {
   // const handleClose = () => setShow(false);
   // const handleShow = () => setShow(true);
 
-  const provider = new GoogleAuthProvider();
-  auth.languageCode = "it";
-
-  const createUserHandler = function (email, password, displayname) {
+  const signInHandler = function (email, password) {
     setIsLoading(true);
-    createUserWithEmailAndPassword(auth, email, password)
+    signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
         setIsLoading(false);
-        updateProfile(auth.currentUser, {
-          displayName: displayname,
-          photoURL:
-            "https://images.unsplash.com/photo-1615986201152-7686a4867f30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=725&q=80",
-        })
-          .then(() => {
-            // Profile updated!
-            // ...
-          })
-          .catch((error) => {
-            // An error occurred
-            // ...
-          });
-        console.log("signin");
-        // Proceed to set the display name
-        //  setDisplayName(user, userName);
         console.log(user);
-        console.log("navigate to user Home");
         navigate("/flow2");
+        console.log("navigate to user Home");
         // ...
       })
       .catch((error) => {
@@ -53,30 +33,6 @@ const SignupForm = () => {
         const errorMessage = error.message;
         console.log(errorCode, errorMessage);
         // ..
-      });
-  };
-
-  const signInWithGoogleHandler = function () {
-    signInWithPopup(auth, provider)
-      .then((result) => {
-        // This gives you a Google Access Token. You can use it to access the Google API.
-        const credential = GoogleAuthProvider.credentialFromResult(result);
-        const token = credential.accessToken;
-        // The signed-in user info.
-        const user = result.user;
-        navigate("/flow2");
-        // IdP data available using getAdditionalUserInfo(result)
-        // ...
-      })
-      .catch((error) => {
-        // Handle Errors here.
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        // The email of the user's account used.
-        const email = error.customData.email;
-        // The AuthCredential type that was used.
-        const credential = GoogleAuthProvider.credentialFromError(error);
-        // ...
       });
   };
 
@@ -95,7 +51,7 @@ const SignupForm = () => {
     onSubmit: (values, { resetForm }) => {
       console.log(values);
       alert(JSON.stringify(values, null, 2));
-      createUserHandler(values.email, values.password, values.firstName);
+      signInHandler(values.email, values.password);
       // setTimeout(() => {
       //   setShow(false);
       // }, 400);
@@ -154,23 +110,17 @@ const SignupForm = () => {
           Get Started
         </Button>
       </Form>
-      <center className="mb-3">
-        <p>Or</p>
 
-        <GoogleButton onClick={signInWithGoogleHandler} />
-      </center>
       <center>
         <p>
-          Already have an account?{" "}
-          <Link style={{ color: "#36DAC" }} to="/login">
-            SIgn In
+          Don't have an account yet?
+          <Link style={{ color: "#36DAC" }} to="/signup">
+            SIgn Up
           </Link>
         </p>
       </center>
-
-      {/* {show && <FormModal show={show} setshow={setShow} />} */}
     </>
   );
 };
 
-export default SignupForm;
+export default LogForm;

@@ -1,0 +1,10 @@
+.second-flow-container {
+  display: flex;
+  padding: 2em;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.second-flow-container div {
+  text-align: center;
+}

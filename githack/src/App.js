@@ -8,9 +8,12 @@ import Root from "./pages/Root";
 import Individual from "./pages/individual/Individual";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLocation } from "react-router-dom";
-
+import Login from "./pages/userlogs/Login";
 import Home from "./pages/home/Home";
 import Investor from "./pages/investor/Investor";
+import SecondFlow from "./pages/userlogs/SecondFlow";
+import ThirdHouseHoldFlow from "./pages/userlogs/ThirdHouseHoldFlow";
+import ThirdInvestorFlow from "./pages/userlogs/ThirdInvestorFlow";
 
 const router = createBrowserRouter([
   {
@@ -23,8 +26,13 @@ const router = createBrowserRouter([
       },
       {
         path: "/login",
+        element: <Login />,
+      },
+      {
+        path: "/signup",
         element: <Register />,
       },
+
       {
         path: "/individual",
         element: <Individual />,
@@ -32,6 +40,18 @@ const router = createBrowserRouter([
       {
         path: "/investors",
         element: <Investor />,
+      },
+      {
+        path: "/flow2",
+        element: <SecondFlow />,
+      },
+      {
+        path: "/householdflow3",
+        element: <ThirdHouseHoldFlow />,
+      },
+      {
+        path: "/investorflow3",
+        element: <ThirdInvestorFlow />,
       },
     ],
     errorElement: <div>Handle wrong routing error page</div>,

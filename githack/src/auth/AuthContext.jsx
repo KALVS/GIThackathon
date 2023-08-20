@@ -6,6 +6,7 @@ const UserAuthContext = createContext();
 
 export const UserAuthContextProvider = function ({ children }) {
   const [currentUser, setCurrentUser] = useState(null);
+
   useEffect(() => {
     const isUserLoggedInFunc = onAuthStateChanged(auth, (user) => {
       if (user) {

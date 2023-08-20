@@ -20,7 +20,7 @@ function MainNavigation() {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="ms-auto fw-bold ">
+          <Nav className="me-auto fw-bold ">
             <Nav.Link>
               {" "}
               <Link className="text-decoration-none text-success" to="/">
@@ -42,7 +42,7 @@ function MainNavigation() {
             <Nav.Link>
               {" "}
               <Link className="text-decoration-none text-success" to="/investors">
-                Investors
+                For Investors
               </Link>
             </Nav.Link>
             <Nav.Link>
@@ -51,7 +51,13 @@ function MainNavigation() {
                 Contact Us
               </Link>
             </Nav.Link>
-
+          </Nav>
+          <Nav className=" gap-lg-3 d-lg-flex ">
+            <Nav.Link className="btn btn-primary bg-success mb-3 mb-lg-0">
+              <Link className="text-decoration-none text-white" to="/signup">
+                Sign Up
+              </Link>
+            </Nav.Link>
             <Nav.Link className="btn btn-primary bg-success">
               <Link className="text-decoration-none text-white" to="/login">
                 Login
