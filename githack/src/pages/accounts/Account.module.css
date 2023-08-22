@@ -9,5 +9,6 @@
 
 .investor-account-page img {
   border-radius: 50%;
-  border: 10px solid blacks;
+  border: 5px solid green;
+  width: 10%;
 }
