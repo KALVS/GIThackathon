@@ -7,7 +7,9 @@ import Root from "./pages/Root";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLocation } from "react-router-dom";
 
+
 import Home from "./pages/home/Home";
+import Investors from "./pages/investors/Investors";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +28,9 @@ const router = createBrowserRouter([
         path: "/getstarted",
         element: <div> Get Started Page </div>,
       },
+      { path: "/investors",
+        element: <Investors />
+      }
     ],
     errorElement: <div>Handle wrong routing error page</div>,
   },
@@ -54,6 +59,8 @@ const routeVariants = {
 };
 
 function App() {
+
+  
   return (
     <RouterProvider router={router}>
       <LocationProvider>

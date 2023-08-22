@@ -1,0 +1,95 @@
+.header {
+    font-family: Quicksand;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 42px; /* 131.25% */
+    letter-spacing: -0.48px;
+    margin-block-start: 32px;
+}
+
+.companyContainer {
+    width:100%;
+    height:240px;
+    border-radius: 6px;
+    background: var(--gt-primary, #367D4C);
+
+    /* Shadow / MD */
+    box-shadow: 0px 4px 6px -1px rgba(16, 24, 40, 0.10), 0px 2px 4px -2px rgba(16, 24, 40, 0.10);
+
+    margin-block-end: 32px;
+  
+    flex-direction: column; /* On mobile, stack columns in a single column */
+    /* ... (other styles) */
+  
+    /* Add media query for mobile */
+    /* Add other styling for your company container */
+    @media (max-width: 768px) {
+      flex-direction: row; /* On mobile, stack columns in a single column */
+      align-items: center; /* Center align items horizontally on mobile */
+    }
+}
+
+
+  .headerContainer {
+    display: flex;
+    width:100%;
+    flex-direction: row;
+    justify-content: space-between;
+    gap:32px
+}
+.editButton {
+    float: right;
+}
+  
+  .column {
+    /* flex: 1; Distribute available space equally among columns */
+    /* margin: 0 10px; Add margin between columns */
+    /* Add other styling for each column */
+  }
+
+  .headerLabel {
+    margin-bottom: 20px; /* Add margin below the header label */
+    /* Define styling for the header label */
+  }
+
+  .columnContainer {
+    gap:32px;
+    display: flex;
+    flex-direction: row; /* Stack items in a column */ 
+    justify-content: space-evenly; /* Distribute columns evenly */
+  }
+
+  .recycleContainer {
+    display: flex;
+    
+    /* width:100%; */
+    flex-direction: row;
+    justify-content: space-evenly; /* Distribute columns evenly */
+    gap: 32px;
+    @media (max-width: 768px) {
+      flex-direction: column; /* On mobile, stack columns in a single column */
+      align-items: center; /* Center align items horizontally on mobile */
+    }
+  }
+
+
+  .pairedCentersCard {
+    width: 284px;
+height: 360px;
+flex-shrink: 0;
+border-radius: 6px;
+background: var(--background-light-base-main, #FFF);
+
+/* Shadow / MD */
+box-shadow: 0px 4px 6px -1px rgba(16, 24, 40, 0.10), 0px 2px 4px -2px rgba(16, 24, 40, 0.10);
+  }
+
+  .card-to-hide {
+    /* Your card styling */
+  background-color: red;
+    /* Set display to none when screen width is below 768px */
+    @media (max-width: 1000px) {
+      display: none;
+    }
+  }

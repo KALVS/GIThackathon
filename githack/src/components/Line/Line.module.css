@@ -1,0 +1,8 @@
+/* Line.module.css */
+.line {
+    height: 2px;
+    width: 100%;
+    background: var(--gt-primary, #367D4C);
+    /* Add other styling properties as needed */
+  }
+  
