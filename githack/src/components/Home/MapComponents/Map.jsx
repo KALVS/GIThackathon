@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
-
+import { Button } from "react-bootstrap";
 import classes from "./Map.module.css";
 
 function MyMap() {
@@ -51,13 +51,19 @@ function MyMap() {
           <strong>The Recycling store</strong>
           <address>Lagos, Nigeria</address>
           <p>Open until 5pm </p>
-          <p className="text-success fw-bold">Accepting Recyling</p>
+          <div className="d-flex justify-content-between ">
+            <p className="text-success fw-bold">Accepting Recyling</p>
+            <Button className="bg-success">Save</Button>
+          </div>
         </div>
         <div className={classes["sub-result-wrapper"]}>
-          <strong>The Recycling store</strong>
-          <address>Lagos, Nigeria</address>
-          <p>Open until 5pm </p>
-          <p className="text-success fw-bold">Accepting Recyling</p>
+          <strong>The IntStelling store</strong>
+          <address>Ondo, Nigeria</address>
+          <p>Open until 4pm </p>
+          <div className="d-flex justify-content-between ">
+            <p className="text-success fw-bold">Not Accepting Recyling</p>
+            <Button className="bg-success">Save</Button>
+          </div>
         </div>
       </div>
     </div>

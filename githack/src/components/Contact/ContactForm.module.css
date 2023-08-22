@@ -1,0 +1,161 @@
+.intro-container h2 {
+  color: #347347;
+  font-weight: bold;
+}
+
+.intro-container ul {
+  list-style-type: none;
+}
+
+.intro-container ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5em;
+  text-align: start;
+  gap: 2em;
+}
+
+/* styles.css */
+
+.custom-form {
+  max-width: 600px;
+  /* Change the maximum width of the form */
+  margin: 0 auto;
+  /* Center the form horizontally */
+  padding: 20px;
+  /* Add padding around the form */
+}
+
+.pr-md-3 {
+  padding-right: 1rem;
+  /* Add padding between columns on medium screens and above */
+}
+
+.pl-md-3 {
+  padding-left: 1rem;
+  /* Add padding between columns on medium screens and above */
+}
+
+/* styles.css */
+
+/* ContactForm.module.css */
+
+.intro-container {
+  margin-bottom: 20px;
+}
+
+.custom-form input .custom-email {
+  color: green;
+  /* Add text color */
+  border-color: green;
+  /* Add border color */
+  background-color: #E1F0DF;
+  /* Add background color */
+  width: 80%;
+  height: 50px;
+  margin-bottom: 30px;
+}
+
+/* Apply focus styles for the input boxes */
+.custom-form input:focus,
+.custom-email:focus {
+  border-color: #125609;
+  background-color: #E1F0DF;
+  box-shadow: 0 0 5px rgba(0, 128, 0, 0.5);
+  width: 80%;
+  height: 50px;
+  margin-bottom: 30px;
+}
+
+/* ContactForm.module.css */
+
+/* ... previous styles ... */
+
+/* ContactForm.module.css */
+
+/* ... previous styles ... */
+
+.custom-select {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-radius: 4px;
+  /* Add border radius */
+}
+
+.custom-select input,
+.custom-form select,
+.custom-select select {
+  /* Add select rule */
+  width: 80%;
+  padding: 10px;
+  border: 1px solid green;
+  /* Set border color */
+  border-radius: 4px;
+  /* Add border radius */
+  cursor: pointer;
+  height: 50px;
+  background-color: #E1F0DF;
+  margin-bottom: 5px;
+  /* Set background color */
+}
+
+.select-options {
+  position: absolute;
+  width: 80%;
+  background-color: #E1F0DF;
+  border: 1px solid #8eae89;
+  border-top: none;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+}
+
+.option {
+  padding: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.option:hover {
+  background-color: #bdf1b6;
+}
+
+.custom-message:focus {
+  border-color: #125609;
+  background-color: #E1F0DF;
+  box-shadow: 0 0 5px rgba(0, 128, 0, 0.5);
+  width: 80%;
+  height: 50px;
+  margin-bottom: 30px;
+}
+
+.custom-message {
+  color: green;
+  /* Add text color */
+  border-color: green;
+  /* Add border color */
+  background-color: #E1F0DF;
+  /* Add background color */
+  width: 100%;
+  height: 50px;
+  margin-bottom: 30px;
+}
+
+.call-container p {
+  font-size: 16px;
+  padding: 10px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.call-container h2 {
+  color: #347347;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.icon {
+  padding: 0px;
+  margin: auto;
+}

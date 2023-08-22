@@ -4,8 +4,10 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import MyMap from "../../components/Home/MapComponents/Map";
+import { useNavigate } from "react-router-dom";
 
 function ThirdHouseHoldFlow() {
+  const navigate = useNavigate();
   return (
     <div className="p-5">
       <Form className="mb-5">
@@ -19,7 +21,9 @@ function ThirdHouseHoldFlow() {
         </div>
       </Form>
       <div className="text-end text-xxl-end mb-5">
-        <Button className="bg-success">Take me to my Account</Button>
+        <Button className="bg-success" onClick={navigate("/myaccount")}>
+          Take me to my Account
+        </Button>
       </div>
       <div>
         <MyMap />

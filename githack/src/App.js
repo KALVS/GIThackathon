@@ -14,7 +14,9 @@ import Investor from "./pages/investor/Investor";
 import SecondFlow from "./pages/userlogs/SecondFlow";
 import ThirdHouseHoldFlow from "./pages/userlogs/ThirdHouseHoldFlow";
 import ThirdInvestorFlow from "./pages/userlogs/ThirdInvestorFlow";
-
+import AboutUs from "./pages/about/About";
+import ContactUs from "./pages/contact/Contact";
+import InvestorAccount from "./pages/accounts/InvestorAccount";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -42,6 +44,14 @@ const router = createBrowserRouter([
         element: <Investor />,
       },
       {
+        path: "/about",
+        element: <AboutUs />,
+      },
+      {
+        path: "/contact",
+        element: <ContactUs />,
+      },
+      {
         path: "/flow2",
         element: <SecondFlow />,
       },
@@ -52,6 +62,10 @@ const router = createBrowserRouter([
       {
         path: "/investorflow3",
         element: <ThirdInvestorFlow />,
+      },
+      {
+        path: "/myaccount",
+        element: <InvestorAccount />,
       },
     ],
     errorElement: <div>Handle wrong routing error page</div>,

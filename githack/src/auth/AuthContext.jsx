@@ -21,6 +21,7 @@ export const UserAuthContextProvider = function ({ children }) {
         // User is signed out
         // ...
         console.log("user Signed Ouut");
+
         // navigate("/login");
       }
     });
