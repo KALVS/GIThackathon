@@ -17,6 +17,8 @@ import ThirdInvestorFlow from "./pages/userlogs/ThirdInvestorFlow";
 import AboutUs from "./pages/about/About";
 import ContactUs from "./pages/contact/Contact";
 import InvestorAccount from "./pages/accounts/InvestorAccount";
+import IndividualAccount from "./pages/accounts/IndividualAccount";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -66,6 +68,10 @@ const router = createBrowserRouter([
       {
         path: "/myaccount",
         element: <InvestorAccount />,
+      },
+      {
+        path: "/myaccount",
+        element: <IndividualAccount />,
       },
     ],
     errorElement: <div>Handle wrong routing error page</div>,
